@@ -1,0 +1,102 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #43539e, #5a3c77);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-page {
+    background: #fff;
+    border-radius: 15px;
+    width: 600px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Header */
+.profile-header .avatar {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.profile-header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.profile-header .role {
+    color: #777;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Info Cards */
+.profile-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f4f6f8;
+    flex: 1;
+    min-width: 130px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #4e4376;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Actions */
+.profile-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    text-decoration: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    background: #4e4376;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2b5876;
+}
+
+.btn.danger {
+    background: #dc3545;
+}
+
+.btn.danger:hover {
+    background: #b52a37;
+}
