@@ -1,5 +1,6 @@
 <?php
 include 'checkadminindb.php';
+include 'adminsidebar.php';
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     header("Location: login.php");
@@ -15,6 +16,10 @@ $total_resources = $result->fetch_assoc()['total_resources'];
 $sql = "SELECT COUNT(*) AS total_requests FROM resource_requests WHERE status = 'pending'";
 $result = $conn->query($sql);
 $total_requests = $result->fetch_assoc()['total_requests'];
+$sql="SELECT COUNT(*) FROM users WHERE role='admin'";
+$result = $conn->query($sql);
+$total_admins = $result->fetch_assoc()['COUNT(*)'];
+$conn->close();
 
 
 ?>
@@ -29,20 +34,7 @@ $total_requests = $result->fetch_assoc()['total_requests'];
 </head>
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>DSS Admin</h2>
 
-        <a href="#">Dashboard</a>
-        <a href="#">Add Admin</a>
-        <a href="#">Add Department</a>
-        <a href="#">Add Department User</a>
-        <a href="#">Manage Resources</a>
-        <a href="#">View Requests</a>
-        <a href="#">Run DSS</a>
-        <a href="#">Reports</a>
-
-    </div>
     <a href="adminprofile.php">
     <div class="namedisplay">
         👨‍💼Logged in as: <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong>
@@ -77,6 +69,11 @@ $total_requests = $result->fetch_assoc()['total_requests'];
                 <h3>⏳Pending Requests</h3>
                 <p>Requests awaiting decisions</p>
                 <h4 class="number"><?php echo $total_requests; ?></h4>
+            </div>
+            <div class="card">
+                <h3>Total admins</h3>
+                <p>Registered system administrators</p>
+                <h4 class="number"><?php echo $total_admins; ?></h4>
             </div>
 
             <div class="card">
