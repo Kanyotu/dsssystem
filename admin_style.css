@@ -66,7 +66,7 @@ body {
     width: 100%;
     padding: 12px;
     background: #4e4376;
-    color: white;
+    color: rgb(26, 78, 59);
     border: none;
     border-radius: 6px;
     font-size: 16px;
@@ -90,4 +90,111 @@ input:focus,
 select:focus {
     outline: none;
     border-color: #4e4376;
+}
+
+
+/* PAGE HEADER */
+.page-header h1 {
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.page-header p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* FORM */
+.resource-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4e4376;
+}
+
+/* BUTTONS */
+.btn-primary {
+    grid-column: 1 / -1;
+    padding: 12px;
+    background: #4e4376;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-primary:hover {
+    background: #2b5876;
+}
+
+.btn-edit {
+    padding: 6px 12px;
+    background: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    padding: 6px 12px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* TABLE */
+.resource-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resource-table th,
+.resource-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.resource-table th {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.resource-table tr:hover {
+    background: #fafafa;
 }

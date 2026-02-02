@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include 'database.php';
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'department') {
     header("Location: login.php");
     exit();
 }
